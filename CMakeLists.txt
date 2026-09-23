@@ -9,6 +9,7 @@ include(FetchContent)
 FetchContent_Declare(
     SFML 
     GIT_REPOSITORY https://github.com/SFML/SFML.git 
+    GIT_TAG 3.1.0
 )
 
 FetchContent_MakeAvailable(SFML)
@@ -18,6 +19,11 @@ set(SOURCE_FILES
     src/main.cpp 
     src/Game.h 
     src/Game.cpp
+
+    src/Entities/Entity.h 
+    src/Entities/Entity.cpp 
+    src/Entities/Player.h 
+    src/Entities/Player.cpp 
 )
 add_executable(FloracideGame ${SOURCE_FILES})
 
