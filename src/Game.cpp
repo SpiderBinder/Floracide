@@ -1,6 +1,7 @@
 
 #include "Game.h"
 
+
 Game::Game(sf::RenderWindow& game_window)
     : window(game_window)
 {
@@ -22,14 +23,14 @@ bool Game::init()
 
 void Game::update(float dt)
 {
-
+    
 
     return;
 }
 
 void Game::render()
 {
-    
+
 
     return;
 }

@@ -19,9 +19,7 @@ public:
     void update(float dt);
     void render();
 
-    // NOTE: Learn SFML 3.0 event handling before doing input stuff
-    /* void keyinput();
-    void mouseinput(); */
+    
 };
 
 #endif // _FLORACIDEGAME_GAME_H_
