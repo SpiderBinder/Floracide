@@ -5,6 +5,9 @@
 #include <SFML/Graphics.hpp>
 
 // NOTE: Will need updating for controller support
+// TODO: Add functionality for setting keybinds
+// TODO: Add managing of keypress events from game window
+// TODO: Add tracking mouse position
 class InputManager
 {
 private:
@@ -21,6 +24,7 @@ private:
 public:
     InputManager();
 
+    // Checking individual key presses
     bool checkKeyUp();
     bool checkKeyDown();
     bool checkKeyLeft();

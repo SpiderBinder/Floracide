@@ -3,20 +3,20 @@
 #define _FLORACIDEGAME_GAMEOBJECT_H_
 
 #include <SFML/Graphics.hpp>
+#include <memory>
 
 class GameObject
 {
 protected:
-    sf::Sprite* sprite = nullptr;
+    std::unique_ptr<sf::Sprite> sprite;
 
     sf::FloatRect collider;
 
 public:
-    GameObject();
-    GameObject(sf::Texture& object_texture);
-    ~GameObject();
+    GameObject(sf::FloatRect object_collider = {{0.f, 0.f}, {0.f, 0.f}});
+    GameObject(sf::Texture& object_texture, sf::FloatRect object_collider = {{0.f, 0.f}, {0.f, 0.f}});
 
-    const sf::Sprite* getSprite();
+    const sf::Sprite& getSprite();
     const sf::FloatRect& getCollider();
 };
 

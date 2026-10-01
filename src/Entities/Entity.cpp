@@ -2,8 +2,11 @@
 #include "Entity.h"
 
 
-Entity::Entity(sf::Texture& entity_spritesheet)
-    : GameObject(entity_spritesheet)
+Entity::Entity(
+    sf::Texture& entity_spritesheet, 
+    sf::FloatRect entity_collider)
+
+    : GameObject(entity_spritesheet, entity_collider)
 {
 
 }

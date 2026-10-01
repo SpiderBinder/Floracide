@@ -1,25 +1,23 @@
 
 #include "GameObject.h"
 
-GameObject::GameObject()
+GameObject::GameObject(
+    sf::FloatRect object_collider)
 {
 
 }
 
-GameObject::GameObject(sf::Texture& object_texture)
+GameObject::GameObject(
+    sf::Texture& object_texture, 
+    sf::FloatRect object_collider)
 {
-    sprite = new sf::Sprite(object_texture);
-}
-
-GameObject::~GameObject()
-{
-    delete sprite;
+    sprite = std::make_unique<sf::Sprite>(object_texture);
 }
 
 
-const sf::Sprite* GameObject::getSprite()
+const sf::Sprite& GameObject::getSprite()
 {
-    return sprite;
+    return *sprite;
 }
 
 const sf::FloatRect& GameObject::getCollider()

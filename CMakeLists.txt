@@ -20,6 +20,11 @@ set(SOURCE_FILES
     src/Game.h 
     src/Game.cpp
 
+    src/Managers/InputManager.h 
+    src/Managers/InputManager.cpp 
+
+    src/Entities/GameObject.h 
+    src/Entities/GameObject.cpp 
     src/Entities/Entity.h 
     src/Entities/Entity.cpp 
     src/Entities/Player.h 

@@ -51,3 +51,5 @@ bool InputManager::checkKeyAction3()
 {
     return sf::Keyboard::isKeyPressed(key_action3);
 }
+
+

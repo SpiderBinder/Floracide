@@ -14,7 +14,7 @@ protected:
     sf::Vector2f velocity;
 
 public:
-    Entity(sf::Texture& entity_spritesheet);
+    Entity(sf::Texture& entity_spritesheet, sf::FloatRect entity_collider = {{0.f, 0.f}, {0.f, 0.f}});
 
     const float& getSpeed();
     const sf::Vector2f& getVelocity();

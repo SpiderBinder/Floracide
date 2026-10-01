@@ -10,7 +10,7 @@ class Player : public Entity
 private:
 
 public:
-    Player(sf::Texture entity_spritesheet);
+    Player(sf::Texture& entity_spritesheet);
 
     void update(float dt);
 
