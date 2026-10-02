@@ -23,6 +23,11 @@ set(SOURCE_FILES
     src/Managers/InputManager.h 
     src/Managers/InputManager.cpp 
 
+    src/Level/Level.h 
+    src/Level/Level.cpp 
+    src/Level/Room.h 
+    src/Level/Room.cpp 
+
     src/Entities/GameObject.h 
     src/Entities/GameObject.cpp 
     src/Entities/Entity.h 
