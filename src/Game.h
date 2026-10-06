@@ -19,11 +19,8 @@ class Game
 private:
     sf::RenderWindow& window;
 
-    sf::Texture texture_test;
-    std::unique_ptr<Player> player_test;
-
-    sf::Texture texture_tileset1;
-    std::unique_ptr<Level> level_test;
+    sf::Texture m_tileset1;
+    std::unique_ptr<Level> m_level_current;
 
 public:
     Game(sf::RenderWindow& window);

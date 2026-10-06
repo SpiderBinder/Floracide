@@ -7,6 +7,7 @@
 #include <memory>
 
 #include "Room.h"
+#include "../Entities/Player.h"
 
 // TODO: Add entities and rooms
 // TODO: Render rooms to game window
@@ -22,6 +23,7 @@ private:
 
     // Level objects
     std::vector<Room> m_rooms;
+    std::shared_ptr<Player> m_player;
 
 public:
     Level(sf::Texture& level_tileset);

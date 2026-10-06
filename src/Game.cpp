@@ -13,21 +13,13 @@ bool Game::init()
 {
     bool success = true;
 
-    if (!texture_test.loadFromFile("../../Content/TestStuff/TestTexture.png"))
-    {
-        std::cout << "\'TestTexture.png\' failed to load" << std::endl;
-        success = false;
-    }
-    player_test = std::make_unique<Player>(texture_test);
-    player_test->setPosition({100.f, 100.f});
-
-    if (!texture_tileset1.loadFromFile("../../Content/TestStuff/TestTileset.png"))
+    if (!m_tileset1.loadFromFile("../../Content/TestStuff/TestTileset.png"))
     {
         std::cout << "\'TestTileset.png\' failed to load" << std::endl;
         success = false;
     }
 
-    level_test = std::make_unique<Level>(texture_tileset1);
+    m_level_current = std::make_unique<Level>(m_tileset1);
 
     return success;
 }
@@ -35,18 +27,14 @@ bool Game::init()
 
 void Game::update(float dt)
 {
-    player_test->update(dt);
-
-    //level_test->update(dt);
+    m_level_current->update(dt);
 
     return;
 }
 
 void Game::render()
 {
-    window.draw(player_test->getSprite());
-
-    level_test->render(window);
+    m_level_current->render(window);
 
     return;
 }

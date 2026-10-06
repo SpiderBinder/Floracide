@@ -9,7 +9,7 @@ int main()
     std::cout << "Hello World!!" << std::endl;
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "FloracideTest");
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(60); // NOTE: May remove later in development
     window.setKeyRepeatEnabled(false);
 
     Game game(window);
@@ -30,7 +30,7 @@ int main()
             if (event->is<sf::Event::Closed>())
                 { window.close(); }
 
-            // TODO: Pass keyboard and mouse input events to Game class
+            // TODO: Pass keyboard and mouse input events to input manager
         }
 
         game.update(dt);
