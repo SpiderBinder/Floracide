@@ -2,8 +2,14 @@
 #include "TileMap.h"
 
 
-TileMap::TileMap(sf::Texture& tileset, sf::Vector2i map_size, sf::Vector2i tile_size, int* tiles)
+TileMap::TileMap(sf::Texture& tileset)
     : m_tileset(tileset)
+{
+    
+}
+
+
+void TileMap::loadMap(sf::Vector2i map_size, sf::Vector2i tile_size, int* tiles)
 {
     // Resize vertex array to map size
     m_vertices.setPrimitiveType(sf::PrimitiveType::Triangles);
@@ -16,11 +22,11 @@ TileMap::TileMap(sf::Texture& tileset, sf::Vector2i map_size, sf::Vector2i tile_
             // Get tile type
             const int tilenum = tiles[i + j * map_size.x];
             // Get tile texture position
-            int tx = tilenum % (tileset.getSize().x / tile_size.x);
-            int ty = tilenum / (tileset.getSize().x / tile_size.x);
+            const int tx = tilenum % (m_tileset.getSize().x / tile_size.x);
+            const int ty = tilenum / (m_tileset.getSize().x / tile_size.x);
 
             // Get a pointer to the starting vertex of tile triangles
-            sf::Vertex* triangles = &m_vertices[i + j * map_size.x];
+            sf::Vertex* triangles = &m_vertices[(i + j * map_size.x) * 6];
 
             // Set position of vertices
             triangles[0].position = sf::Vector2f(i * tile_size.x, j * tile_size.x);

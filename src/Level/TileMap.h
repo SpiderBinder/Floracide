@@ -14,7 +14,9 @@ private:
     sf::Texture& m_tileset;
 
 public:
-    TileMap(sf::Texture& tileset, sf::Vector2i map_size, sf::Vector2i tile_size, int* tiles);
+    TileMap(sf::Texture& tileset);
+
+    void loadMap(sf::Vector2i map_size, sf::Vector2i tile_size, int* tiles);
     
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
