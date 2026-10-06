@@ -6,7 +6,13 @@
 #include <iostream>
 #include <memory>
 
+#include "Level/Level.h"
+// NOTE: Temporary inclusions while making project
 #include "Entities/Player.h"
+#include "Level/TileMap.h"
+
+// TODO: Research methods to deal with consistently finding 'Content' file?
+// TODO: Move file loading to seperate class to clean up Game.cpp
 
 class Game
 {
@@ -16,8 +22,12 @@ private:
     sf::Texture texture_test;
     std::unique_ptr<Player> player_test;
 
+    sf::Texture texture_tileset1;
+    std::unique_ptr<Level> level_test;
+
 public:
     Game(sf::RenderWindow& window);
+    
     bool init();
 
     void update(float dt);

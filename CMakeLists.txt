@@ -27,6 +27,8 @@ set(SOURCE_FILES
     src/Level/Level.cpp 
     src/Level/Room.h 
     src/Level/Room.cpp 
+    src/Level/TileMap.h 
+    src/Level/TileMap.cpp 
 
     src/Entities/GameObject.h 
     src/Entities/GameObject.cpp 

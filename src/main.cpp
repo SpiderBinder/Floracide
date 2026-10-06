@@ -40,4 +40,6 @@ int main()
         game.render();
         window.display();
     }
+
+    return 0;
 }
