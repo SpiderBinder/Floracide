@@ -20,6 +20,8 @@ set(SOURCE_FILES
     src/Game.h 
     src/Game.cpp
 
+    src/Managers/ResourceManager.h 
+    src/Managers/ResourceManager.cpp 
     src/Managers/InputManager.h 
     src/Managers/InputManager.cpp 
 
